@@ -27,3 +27,8 @@ drawLines();
 
 
 window.addEventListener("resize", drawLines);
+
+
+
+//zrobić, żeby cień kierował się w stronę myszki (tak jak w edytorze)
+//zeby na hovera przelatywalo coś
