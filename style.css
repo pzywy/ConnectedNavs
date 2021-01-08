@@ -1,0 +1,51 @@
+body, html {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
+body {
+  background: #13070C;
+  color: #d1e3dd;
+}
+
+body .navDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  height: 80%;
+  margin: auto;
+}
+
+body .navDiv .nav {
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  border: #b33951 solid 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+body .navDiv .nav:nth-child(2n) {
+  border-color: #d1e3dd;
+}
+
+body .navDiv .nav:nth-child(2n) {
+  margin-top: 10%;
+}
+
+body .navDiv .nav:nth-child(2n+1) {
+  margin-bottom: 10%;
+}
+/*# sourceMappingURL=style.css.map */
