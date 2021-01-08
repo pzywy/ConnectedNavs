@@ -1,32 +1,34 @@
-body, html {
-  height: 100vh;
-  width: 100vw;
+body {
+  height: 100%;
+  width: 100%;
   margin: 0;
+  padding: 0;
 }
 
 body {
   font-size: 16px;
-  background: #13070C;
+  background: #0d1821;
   color: #d1e3dd;
 }
 
 body .navDiv {
+  background-color: #0d1821;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100vh;
   margin: auto;
 }
 
 body .navDiv .nav {
-  background: #13070C;
+  background: #0d1821;
   z-index: 10;
   margin: auto;
   width: 100px;
   height: 100px;
   border-radius: 100px;
-  border: #b33951 solid 2px;
+  border: #4b4e6d solid 2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,22 +40,42 @@ body .navDiv .nav {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  -webkit-transition: -webkit-transform ease-in-out .4s;
+  transition: -webkit-transform ease-in-out .4s;
+  transition: transform ease-in-out .4s;
+  transition: transform ease-in-out .4s, -webkit-transform ease-in-out .4s;
 }
 
 body .navDiv .nav:nth-child(2n) {
   border-color: #d1e3dd;
 }
 
-body .navDiv .nav:nth-child(2n) {
-  margin-top: 10%;
+body .navDiv .nav:nth-child(2) {
+  margin-top: 40%;
 }
 
-body .navDiv .nav:nth-child(2n+1) {
+body .navDiv .nav:nth-child(3) {
+  margin-bottom: 10%;
+}
+
+body .navDiv .nav:nth-child(4) {
+  margin-right: 0%;
+  margin-top: 5%;
+}
+
+body .navDiv .nav:nth-child(5) {
+  margin-left: 10%;
   margin-bottom: 10%;
 }
 
 body .navDiv .nav:nth-child(3) {
   margin: auto 0;
+}
+
+body .navDiv .nav:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  cursor: pointer;
 }
 
 body .svg {
@@ -67,6 +89,31 @@ body .svg {
 body .svg .line {
   stroke: #d1e3dd;
   stroke-width: 2;
+}
+
+body .svg .line:hover {
+  stroke-width: 3;
+}
+
+body .content {
+  background: #0d1821;
+  color: #d1e3dd;
+  width: 90%;
+  padding: 5%;
+  margin: 0;
+}
+
+body .content * {
+  height: 100vh;
+  padding: 5%;
+}
+
+body .content *:nth-child(2n) {
+  background: #4b4e6d;
+}
+
+body .content *:nth-child(2n+1) {
+  background: #321325;
 }
 
 @media (max-width: 675px) {
