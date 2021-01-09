@@ -16,7 +16,6 @@ function drawLines()
     
     for(i=0;i<navs.length; i++)
     {
-    
         lines[i].setAttribute('x2', String(navs[i].offsetLeft + size/2));
         lines[i].setAttribute('y2', String(navs[i].offsetTop + size/2));
     }
@@ -24,11 +23,25 @@ function drawLines()
 
 drawLines();
 
-
-
 window.addEventListener("resize", drawLines);
 
 
 
 //zrobić, żeby cień kierował się w stronę myszki (tak jak w edytorze)
-//zeby na hovera przelatywalo coś
+//zeby na hovera przelatywalo coś po liniach
+
+
+ContentChilds = document.querySelectorAll('.contentChild');
+navs = document.querySelectorAll('.nav');
+
+//Give every nav property with order
+for(i=0;i<navs.length;i++)
+{
+    navs[i].order=i;
+}
+
+//on nav click scroll to offeset of ContentChild 
+navs.forEach(   nav => nav.addEventListener(   'click' , () => {
+    console.log(ContentChilds[nav.order].offsetTop);  
+    window.scroll(0,ContentChilds[nav.order].offsetTop )
+}));
