@@ -1,7 +1,15 @@
+navs = document.querySelectorAll('.nav');
+
+function setOrderProperty(element)
+{
+    for(i=0;i<element.length;i++)
+    {
+        element[i].order=i;
+    }
+}
 
 function drawLines()
 {
-    navs = document.querySelectorAll('.nav');
     lines = document.querySelectorAll('.line');
     size = document.querySelector('.nav').offsetWidth;
 
@@ -22,8 +30,8 @@ function drawLines()
 }
 
 drawLines();
-
 window.addEventListener("resize", drawLines);
+setOrderProperty(navs);
 
 
 
@@ -31,17 +39,23 @@ window.addEventListener("resize", drawLines);
 //zeby na hovera przelatywalo coś po liniach
 
 
+
 ContentChilds = document.querySelectorAll('.contentChild');
-navs = document.querySelectorAll('.nav');
-
-//Give every nav property with order
-for(i=0;i<navs.length;i++)
-{
-    navs[i].order=i;
-}
-
 //on nav click scroll to offeset of ContentChild 
 navs.forEach(   nav => nav.addEventListener(   'click' , () => {
     console.log(ContentChilds[nav.order].offsetTop);  
     window.scroll(0,ContentChilds[nav.order].offsetTop )
 }));
+
+
+navs.forEach(nav => nav.addEventListener('mouseover',NavHovered));
+
+function NavHovered(e)
+{
+    hoveredNavOrderNumber = e.path[0].order;
+    hoveredNav=e.path[0];
+
+    console.log(hoveredNav);
+
+    
+}

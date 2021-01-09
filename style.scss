@@ -42,8 +42,10 @@ body
             justify-content: center;
             flex-direction: column;
             text-align: center;
+            box-shadow:  -5px -5px 15px 2px black;
             &:nth-child(2n)
             {
+                box-shadow:  5px 5px 15px 2px black;
                 border-color:color(font);
             }
             &:nth-child(2)
@@ -90,7 +92,7 @@ body
             box-shadow: 10px 10px 10px 10px black;
             &:hover
             {
-                stroke-width: 5;
+                stroke-width: 3;
             }
         }
     }

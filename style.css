@@ -40,6 +40,8 @@ body .navDiv .nav {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  -webkit-box-shadow: -5px -5px 15px 2px black;
+          box-shadow: -5px -5px 15px 2px black;
   -webkit-transition: -webkit-transform ease-in-out .4s;
   transition: -webkit-transform ease-in-out .4s;
   transition: transform ease-in-out .4s;
@@ -47,6 +49,8 @@ body .navDiv .nav {
 }
 
 body .navDiv .nav:nth-child(2n) {
+  -webkit-box-shadow: 5px 5px 15px 2px black;
+          box-shadow: 5px 5px 15px 2px black;
   border-color: #d1e3dd;
 }
 
@@ -94,7 +98,7 @@ body .svg .line {
 }
 
 body .svg .line:hover {
-  stroke-width: 5;
+  stroke-width: 3;
 }
 
 body .content {
